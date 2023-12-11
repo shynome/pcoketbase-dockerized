@@ -1,6 +1,6 @@
 FROM alpine:latest AS download
 RUN apk add --no-cache unzip 
-ARG PB_VERSION=0.19.4
+ARG PB_VERSION=0.20.0
 # download and unzip PocketBase
 ADD https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_amd64.zip /tmp/pb.zip
 RUN unzip /tmp/pb.zip -d /pb/
